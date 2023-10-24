@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:white;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+.logo {
+    font-size: 2rem; /* Increased the font size to 2rem */
+    color: black;
+    text-align: left;
+}
+
+/* Add the desired stable font to your text, for example: */
+nav a {
+    font-family: 'StableFont', sans-serif; /* Replace 'StableFont' with your desired font for navigation links */
+}
+
+/* Add a separate font for the .logo text if needed: */
+.logo {
+    font-family: 'BigFont', sans-serif; /* Replace 'BiggerFont' with your desired font for the logo */
+}
+/* Existing CSS code */
+
+nav a {
+    text-decoration: none;
+    color: black;
+    position: relative; /* Add this line to establish a positioning context for the pseudo-element */
+    font-family: 'Lato', sans-serif; /* Use the desired font-family name here */
+}
+
+nav a::before {
+    content: ''; /* Create an empty content box */
+    position: absolute; /* Position the pseudo-element */
+    width: 100%; /* Full width of the link */
+    height: 2px; /* Height of the underline */
+    bottom: 0; /* Position it at the bottom of the link */
+    background-color: grey; /* Color of the underline */
+    transform: scaleX(0); /* Initially, set the width to 0 */
+    transform-origin: 0 0; /* Origin at the left */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+nav a:hover::before {
+    transform: scaleX(1); /* Expand the underline to full width on hover */
+}
+
+/* Existing CSS code */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    font-family: cursive;
+    background-color:wheat; /* Background color for the section */
+}
+h2{
+    color: black;
+}
+/* Style the left content in the section */
+.left {
+    flex: 1;
+    padding: 20px;
+}
+
+.left p {
+    font-size: x-large;
+    margin: 10px 0;
+    color: rgb(220, 143, 0);
+    font-family: cursive;
+}
+
+/* Style the "me" class within the left content */
+.me {
+    font-family: cursive;
+    font-size: 10px;
+    color: (220, 143, 0);
+}
+
+/* Style the right content in the section */
+.right {
+    flex: 1;
+}
+
+.right img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto;
+}
+/* Navigation Bar Animation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    animation: fadeInDown 1s ease forwards; /* Fade in from the top */
+}
+
+@keyframes fadeInDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Heading Animation */
+h2 {
+    color: black;
+    animation: slideInRight 1s ease forwards; /* Slide in from the right */
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Home Section Animation */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: wheat;
+    animation: fadeIn 1s ease forwards; /* Fade in */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Left Content in Home Section Animation */
+.left {
+    flex: 1;
+    padding: 20px;
+    animation: slideInLeft 1s ease forwards; /* Slide in from the left */
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Image in Home Section Animation */
+.right img {
+    max-width: 100%;
+    height: auto;
+    animation: zoomIn 1s ease forwards; /* Zoom in */
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Your existing CSS for navbar and other sections */
+
+/* CSS for the "about-content" section
+.about-content {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about-content h2 {
+    color: orange;
+    font-size: 70px; 
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about-content h5 {
+    color: wheat;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-bottom: 23px;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about-content p {
+    color: wheat;
+    line-height: 28px;
+    text-align: left;
+}
+/* 
+/* CSS for the "about-image" section */
+/* .about-image {
+    flex: 1;
+    text-align: center; */
+/*
+
+/* .about-image img {
+    max-width: 100%;
+    height: auto;
+} */ 
+/* Your existing CSS for navbar and other sections */
+
+/* CSS for the "about-content" section */
+/* Style the main container in the "About Me" section */
+/* .main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black; /* Added background color to the main container */
+
+/* / */
+/* CSS for the "about" section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: black;
+}
+
+/* Style the main container in the "About Me" section */
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black; /* Added background color to the main container */
+}
+
+/* Style the left container (for the image) */
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    height: 80vh;
+    align-items: right;
+}
+
+/* Style the right container (for the text) */
+.about-content {
+    flex: 1;
+    color: white; /* Text color for the "About Me" content */
+    font-family: cursive;
+    text-align: left;
+}
+
+.about-content h2 {
+    color: orange;
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.about-content h5 {
+    color: wheat;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-bottom: 23px;
+    text-transform: capitalize;
+    font-family: cursive;
+}
+.about-content h5:hover{
+    color: yellow;
+}
+.about-content h2:hover{
+    color: yellow;
+}
+.about-content p:hover{
+    color:yellow;
+}
+.about-content p {
+    color: wheat;
+    line-height: 28px;
+    font-family: cursive;
+}
+.skills{
+  background-color:white;
+  text-align: center;
+}
+.h2skills{
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: orange;
+    font-family: cursive;    
+}
+.h2skills:hover{
+    color: wheat;
+}
+.h2web{
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: cursive; 
+    color: orange;
+}
+.h2web:hover{
+    color: wheat;
+}
+.python{
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: cursive; 
+    color: orange;
+}
+.python:hover{
+    color: wheat;
+}
+.skills{
+    background-color: white;
+}
+.Resume{
+    background-color: wheat;
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: cursive; 
+}
+.CV {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%; /* Adjust the max-width to your preference */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.h2cv{
+    color: orange;
+}
+.download-button {
+    display: inline-block;
+    background-color: orange;
+    color: wheat;
+    padding: 8px 16px; /* Adjust the padding for medium size */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size for medium size */
+     /* Align the button to the left */
+}
+
+.download-button i {
+    margin-left: 5px;
+}
+
+.download-button:hover {
+    background-color: white;
+}
+.Cvv{
+    color: orange;
+}
+.Cvv:hover{
+    color: white;
+}
+.headingp{
+    text-align: center;
+    font-size: 60px;
+    font-family: cursive;
+    color: orange;
+}
+.headingp:hover{
+    color: wheat;
+}
+/* Apply styles to the projects section */
+.projects {
+    background-color: white;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    display: flex; /* Use flex display to place projects in one line */
+    justify-content: space-between; /* Distribute projects evenly in a line */
+    flex-wrap: nowrap; /* Prevent projects from wrapping to the next line */
+}
+
+/* Style the project container */
+.projectdiv {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px; /* Reduce padding */
+    width: 45%; /* Set the width to 45% for two projects in one line */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* Distribute available space equally between the two projects */
+}
+
+/* Style the project image */
+.projectdiv img {
+    max-width: 80%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Style the project description */
+.projectdiv p {
+    font-size: 16px;
+    color: orange;
+    margin-bottom: 10px; /* Reduce margin */
+}
+
+/* Style the "Get Code" link */
+.projectdiv a {
+    background-color: #0056b3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+/* Hover effect for the "Get Code" link */
+.projectdiv a:hover {
+    background-color: wheat;
+    color: white;
+}
+.email {
+    display: inline;
+    color: orange;
+    font-family: cursive;
+    align-items: center;
+}
+.linkedin {
+    display: inline;
+    color: orange;
+    text-decoration: none;
+    font-family: cursive;
+    align-items: center;
+}
+.contact:hover{
+    color: wheat;
+}
+.contactme{
+    color: orange;
+    font-family: cursive;
+}
+.contact{
+    background-color: black;
+    color: orange;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+}
+
+.projectdiv:hover {
+    background-color: #0056b3;
+    transition: all 0.2s;
+}
+.footer {
+    background-color: orange;
+    display: flex;
+    color: black;
+    justify-content: center;
+    position: relative;
+    height: 80px;
+    width: 100%;
+}
+
+.copyright {
+    font-weight: bold;
+  }
